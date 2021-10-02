@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<plurals name="loaded_lines">
+		<item quantity="one">Loaded file with %d line.</item>
+		<item quantity="few">Loaded file with %d lines.</item>
+		<item quantity="many">Loaded file with %d lines.</item>
+		<item quantity="other">Loaded file with %d lines.</item>
+	</plurals>
+</resources>

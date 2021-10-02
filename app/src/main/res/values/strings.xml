@@ -1,0 +1,11 @@
+<resources>
+	<string name="app_name"
+		translatable="false">Less</string>
+	<string name="failed_to_read">Failed to read %s</string>
+	<string name="ic_fixed_font">Fixed-width font</string>
+	<string name="ic_line_numbers">Show line numbers</string>
+	<string name="ic_open">Open</string>
+	<string name="no_content">Welcome!\n\nLess is an extremely light, fast and simple text file viewer.\n\nPlease select a file using the
+		top-menu.\n\nLess version: %s</string>
+	<string name="empty_file">File is empty</string>
+</resources>

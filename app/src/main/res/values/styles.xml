@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppEditTextStyle"
+		parent="android:Widget.EditText">
+		<item name="android:textColor">@color/textColor</item>
+	</style>
+
+	<style name="AppTextViewStyle"
+		parent="android:Widget.TextView">
+		<item name="android:textColor">@color/textColor</item>
+	</style>
+
+	<style name="AppTheme.ActionBarEllipsize.SubtitleTextStyle"
+		parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="AppTheme.ActionBarStyle"
+		parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+		<item name="subtitleTextStyle">@style/AppTheme.ActionBarEllipsize.SubtitleTextStyle</item>
+	</style>
+
+	<style name="AppTheme"
+		parent="@style/Theme.AppCompat.Light">
+		<item name="actionModeBackground">@color/primary</item>
+		<item name="colorPrimary">@color/primary</item>
+		<item name="colorPrimaryDark">@color/primary_dark</item>
+		<item name="editTextStyle">@style/AppEditTextStyle</item>
+		<item name="android:actionModeBackground">@color/primary</item>
+		<item name="android:colorPrimary">@color/primary</item>
+		<item name="android:colorPrimaryDark">@color/primary_dark</item>
+		<item name="android:textColorPrimary">@android:color/white</item>
+		<item name="android:editTextStyle">@style/AppEditTextStyle</item>
+		<item name="android:textViewStyle">@style/AppTextViewStyle</item>
+		<item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
+	</style>
+</resources>

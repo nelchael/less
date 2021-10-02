@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<plurals name="loaded_lines">
+		<item quantity="one">Wczytano plik z %d linijką.</item>
+		<item quantity="few">Wczytano plik z %d linijkami.</item>
+		<item quantity="many">Wczytano plik z %d linijkami.</item>
+		<item quantity="other">Wczytano plik z %d linijkami.</item>
+	</plurals>
+</resources>

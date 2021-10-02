@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:icon="@drawable/ic_open"
+		android:onClick="onActionOpen"
+		android:orderInCategory="100"
+		android:title="@string/ic_open"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/use_fixed_width_font"
+		android:checkable="true"
+		android:onClick="onFixedFontClick"
+		android:orderInCategory="200"
+		android:title="@string/ic_fixed_font"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/show_line_numbers"
+		android:checkable="true"
+		android:onClick="onLineNumbersClick"
+		android:orderInCategory="300"
+		android:title="@string/ic_line_numbers"
+		app:showAsAction="never" />
+</menu>

@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+int makeVersionCode(String versionName, int patchVersion) {
+	int version = Integer.parseInt(versionName.substring(versionName.indexOf('.')).replaceAll('\\.', '')) * 10 + patchVersion
+	logger.quiet('Version: {} -> {}', versionName, version)
+	return version
+}
+
+android {
+	compileSdkVersion 30
+	defaultConfig {
+		applicationId "pl.ariessystems.less"
+		minSdkVersion 23
+		targetSdkVersion 30
+		versionName '1.2021.09.11'
+		versionCode makeVersionCode(versionName as String, 0)
+	}
+	buildToolsVersion '31.0.0'
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {
+	implementation 'androidx.appcompat:appcompat:1.3.1'
+	implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
