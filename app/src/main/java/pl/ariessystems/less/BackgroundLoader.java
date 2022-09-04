@@ -16,6 +16,10 @@ class BackgroundLoader extends AsyncTask<InputStream, Void, Void> {
 	private OnLoadCompleteListener onLoadCompleteListener = null;
 	private OnLoadErrorListener onLoadErrorListener = null;
 
+	public BackgroundLoader() {
+		super();
+	}
+
 	BackgroundLoader setOnLoadCompleteListener(OnLoadCompleteListener onLoadCompleteListener) {
 		this.onLoadCompleteListener = onLoadCompleteListener;
 		return this;

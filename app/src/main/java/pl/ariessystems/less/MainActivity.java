@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
 		fullScreen = !fullScreen;
 	}
 
-	public void onActionOpen(MenuItem item) {
+	public void onActionOpen(@SuppressWarnings("unused") MenuItem item) {
 		Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
 		intent.addCategory(Intent.CATEGORY_OPENABLE);
 		intent.setType("*/*");
