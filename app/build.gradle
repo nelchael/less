@@ -13,7 +13,7 @@ android {
 		applicationId 'pl.ariessystems.less'
 		minSdkVersion 23
 		targetSdkVersion 33
-		versionName '1.2022.09.04'
+		versionName '1.2023.03.26'
 		versionCode makeVersionCode(versionName as String, 0)
 	}
 	buildToolsVersion '33.0.2'
