@@ -7,22 +7,23 @@ int makeVersionCode(String versionName, int patchVersion) {
 }
 
 android {
+	namespace 'pl.ariessystems.less'
 	compileSdkVersion 33
 	defaultConfig {
-		applicationId "pl.ariessystems.less"
+		applicationId 'pl.ariessystems.less'
 		minSdkVersion 23
 		targetSdkVersion 33
 		versionName '1.2022.09.04'
 		versionCode makeVersionCode(versionName as String, 0)
 	}
-	buildToolsVersion '33.0.0'
+	buildToolsVersion '33.0.2'
 	compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_8
-		targetCompatibility JavaVersion.VERSION_1_8
+		sourceCompatibility JavaVersion.VERSION_11
+		targetCompatibility JavaVersion.VERSION_11
 	}
 }
 
 dependencies {
-	implementation 'androidx.appcompat:appcompat:1.5.0'
+	implementation 'androidx.appcompat:appcompat:1.6.1'
 	implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
