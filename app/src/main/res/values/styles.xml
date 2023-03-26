@@ -16,9 +16,15 @@
 		<item name="android:textColor">@android:color/white</item>
 	</style>
 
+	<style name="PopUpMenuTheme">
+		<item name="colorAccent">@color/primary</item>
+		<item name="buttonTint">@color/primary_dark</item>
+	</style>
+
 	<style name="AppTheme.ActionBarStyle"
 		parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
 		<item name="subtitleTextStyle">@style/AppTheme.ActionBarEllipsize.SubtitleTextStyle</item>
+		<item name="popupTheme">@style/PopUpMenuTheme</item>
 	</style>
 
 	<style name="AppTheme"
