@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColor">#ffd2d2d2</color>
+    <color name="primary">#0a3b63</color>
+    <color name="primary_dark">#ff093259</color>
+    <color name="line_number_background">#1d1d1d</color>
+    <color name="line_number_foreground">@color/textColor</color>
+    <color name="toolbar_subtitle">@color/textColor</color>
+</resources>

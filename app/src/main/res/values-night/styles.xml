@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PopUpMenuTheme">
+        <item name="colorAccent">@color/textColor</item>
+        <item name="buttonTint">@color/textColor</item>
+    </style>
+
+    <style name="AppTheme" parent="AppThemeBase">
+        <item name="android:textColorPrimary">@color/textColor</item>
+    </style>
+</resources>

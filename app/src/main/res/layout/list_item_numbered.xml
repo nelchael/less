@@ -15,7 +15,7 @@
 		android:paddingEnd="@dimen/small_padding"
 		android:paddingStart="@dimen/small_padding"
 		android:textAlignment="textEnd"
-		android:textColor="@color/primary_dark" />
+		android:textColor="@color/line_number_foreground" />
 
 	<TextView
 		android:id="@+id/line_content"

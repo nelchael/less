@@ -13,7 +13,7 @@
 
 	<style name="AppTheme.ActionBarEllipsize.SubtitleTextStyle"
 		parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
-		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textColor">@color/toolbar_subtitle</item>
 	</style>
 
 	<style name="PopUpMenuTheme">
@@ -27,8 +27,8 @@
 		<item name="popupTheme">@style/PopUpMenuTheme</item>
 	</style>
 
-	<style name="AppTheme"
-		parent="@style/Theme.AppCompat.Light">
+	<style name="AppThemeBase"
+		parent="@style/Theme.AppCompat.DayNight">
 		<item name="actionModeBackground">@color/primary</item>
 		<item name="colorPrimary">@color/primary</item>
 		<item name="colorPrimaryDark">@color/primary_dark</item>
@@ -41,4 +41,6 @@
 		<item name="android:textViewStyle">@style/AppTextViewStyle</item>
 		<item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
 	</style>
+
+	<style name="AppTheme" parent="AppThemeBase" />
 </resources>

@@ -4,4 +4,6 @@
 	<color name="primary">#1477C6</color>
 	<color name="primary_dark">#ff1464b2</color>
 	<color name="line_number_background">#efefef</color>
+	<color name="line_number_foreground">@color/primary_dark</color>
+	<color name="toolbar_subtitle">@android:color/white</color>
 </resources>
