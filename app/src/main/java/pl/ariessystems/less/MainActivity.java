@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -18,6 +20,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetView;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -31,6 +36,7 @@ import pl.ariessystems.less.fragments.LoadingFragment;
 public class MainActivity extends AppCompatActivity {
 	public static final String PREF_FIXED_WIDTH = "fixedWidth";
 	public static final String PREF_LINE_NUMBERS = "lineNumbers";
+	public static final String PREF_HINT_DOUBLE_TAP_HIDDEN = "hintDoubleTapHidden";
 	private static final int FILE_CHOOSER_REQUEST_CODE = 101;
 	private static final String SAVE_FILE_KEY = "loadedFileUri";
 	private static final String TAG = MainActivity.class.getName();
@@ -51,6 +57,53 @@ public class MainActivity extends AppCompatActivity {
 			loadedFile = intent.getData();
 		}
 		loadFile(loadedFile);
+
+		if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(PREF_HINT_DOUBLE_TAP_HIDDEN, false)) {
+			new Thread() {
+				@Override
+				public void run() {
+					// Show it after a second...
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						Log.w(TAG, "Sleep interrupted", e);
+					}
+					runOnUiThread(MainActivity.this::showTapTarget);
+				}
+			}.start();
+		}
+	}
+
+	private void disableTapTarget() {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putBoolean(PREF_HINT_DOUBLE_TAP_HIDDEN, true);
+		editor.apply();
+	}
+
+	private void showTapTarget() {
+		View view = findViewById(R.id.fragment);
+		int[] location = {0, 0};
+		view.getLocationOnScreen(location);
+		int offset = view.getWidth() / 10;
+
+		int left = location[0] + (int) (1.5f * offset);
+		int top = location[1] + (int) (0.75f * offset);
+		TapTargetView.showFor(MainActivity.this, TapTarget.forBounds(new Rect(left, top, left + offset, top + offset),
+		                                                             getText(R.string.hint_double_tap))
+			.transparentTarget(true)
+			.textColor(R.color.hint_text), new TapTargetView.Listener() {
+			@Override
+			public void onTargetDismissed(TapTargetView view, boolean userInitiated) {
+				MainActivity.this.disableTapTarget();
+			}
+
+			@Override
+			public void onOuterCircleClick(TapTargetView view) {
+				MainActivity.this.disableTapTarget();
+				view.dismiss(false);
+			}
+		});
 	}
 
 	@Override

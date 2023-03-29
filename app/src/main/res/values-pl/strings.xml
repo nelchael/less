@@ -6,4 +6,5 @@
 	<string name="no_content">Witaj!\n\nLess to bardzo lekka, szybka i prosta przeglądarka plików tekstowych.\n\nWybierz plik do otwarcia
 		korzystając z górnego menu.\n\nWersja less: %s</string>
 	<string name="empty_file">Plik jest pusty</string>
+	<string name="hint_double_tap">Dotknij tekstu dwa razy aby przełączyć na pełny ekran!</string>
 </resources>

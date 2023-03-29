@@ -8,4 +8,5 @@
 	<string name="no_content">Welcome!\n\nLess is an extremely light, fast and simple text file viewer.\n\nPlease select a file using the
 		top-menu.\n\nLess version: %s</string>
 	<string name="empty_file">File is empty</string>
+	<string name="hint_double_tap">Tap the text twice to switch to fullscreen!</string>
 </resources>

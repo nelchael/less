@@ -6,4 +6,5 @@
     <color name="line_number_background">#1d1d1d</color>
     <color name="line_number_foreground">@color/textColor</color>
     <color name="toolbar_subtitle">@color/textColor</color>
+    <color name="hint_text">@color/textColor</color>
 </resources>

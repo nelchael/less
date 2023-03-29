@@ -6,4 +6,5 @@
 	<color name="line_number_background">#efefef</color>
 	<color name="line_number_foreground">@color/primary_dark</color>
 	<color name="toolbar_subtitle">@android:color/white</color>
+	<color name="hint_text">@android:color/white</color>
 </resources>
