@@ -31,11 +31,11 @@
 		parent="@style/Theme.AppCompat.DayNight">
 		<item name="actionModeBackground">@color/primary</item>
 		<item name="colorPrimary">@color/primary</item>
-		<item name="colorPrimaryDark">@color/primary_dark</item>
+		<item name="colorPrimaryDark">@color/primary</item>
 		<item name="editTextStyle">@style/AppEditTextStyle</item>
 		<item name="android:actionModeBackground">@color/primary</item>
 		<item name="android:colorPrimary">@color/primary</item>
-		<item name="android:colorPrimaryDark">@color/primary_dark</item>
+		<item name="android:colorPrimaryDark">@color/primary</item>
 		<item name="android:textColorPrimary">@android:color/white</item>
 		<item name="android:editTextStyle">@style/AppEditTextStyle</item>
 		<item name="android:textViewStyle">@style/AppTextViewStyle</item>
