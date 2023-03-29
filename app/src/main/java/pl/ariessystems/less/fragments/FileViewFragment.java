@@ -20,40 +20,41 @@ import pl.ariessystems.less.adapters.NumberedAdapter;
 import pl.ariessystems.less.adapters.SimpleAdapter;
 
 public class FileViewFragment extends Fragment {
-	private long lastClickTime = 0;
-	private List<String> text = new ArrayList<>();
+    private long lastClickTime = 0;
+    private List<String> text = new ArrayList<>();
 
-	@Override
-	public View onCreateView(@NonNull final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		TextView textView = (TextView)inflater.inflate(R.layout.list_item_simple, container, false);
-		float defaultTextSize = textView.getTextSize();
+    @Override
+    public View onCreateView(@NonNull final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        TextView textView = (TextView) inflater.inflate(R.layout.list_item_simple, container, false);
+        float defaultTextSize = textView.getTextSize();
 
-		boolean showLineNumbers = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(MainActivity.PREF_LINE_NUMBERS, false);
+        boolean showLineNumbers = PreferenceManager.getDefaultSharedPreferences(getActivity())
+            .getBoolean(MainActivity.PREF_LINE_NUMBERS, false);
 
-		ListView listView = (ListView)inflater.inflate(R.layout.fragment_file_view, container, false);
-		if (showLineNumbers) {
-			listView.setAdapter(new NumberedAdapter(getActivity(), text, inflater, defaultTextSize));
-		} else {
-			listView.setAdapter(new SimpleAdapter(getActivity(), text, inflater, defaultTextSize));
-		}
+        ListView listView = (ListView) inflater.inflate(R.layout.fragment_file_view, container, false);
+        if (showLineNumbers) {
+            listView.setAdapter(new NumberedAdapter(getActivity(), text, inflater, defaultTextSize));
+        } else {
+            listView.setAdapter(new SimpleAdapter(getActivity(), text, inflater, defaultTextSize));
+        }
 
-		listView.setOnItemClickListener((parent, view, position, id) -> {
-			if (System.currentTimeMillis() >= lastClickTime + 1000) {
-				lastClickTime = System.currentTimeMillis();
-				return;
-			}
-			lastClickTime = 0;
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            if (System.currentTimeMillis() >= lastClickTime + 1000) {
+                lastClickTime = System.currentTimeMillis();
+                return;
+            }
+            lastClickTime = 0;
 
-			MainActivity mainActivity = (MainActivity)getActivity();
-			if (mainActivity != null) {
-				mainActivity.toggleFullscreen();
-			}
-		});
+            MainActivity mainActivity = (MainActivity) getActivity();
+            if (mainActivity != null) {
+                mainActivity.toggleFullscreen();
+            }
+        });
 
-		return listView;
-	}
+        return listView;
+    }
 
-	public void setText(List<String> text) {
-		this.text = text;
-	}
+    public void setText(List<String> text) {
+        this.text = text;
+    }
 }

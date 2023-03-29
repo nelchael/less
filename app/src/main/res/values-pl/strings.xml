@@ -1,10 +1,10 @@
 <resources>
-	<string name="failed_to_read">Błąd odczytu %s</string>
-	<string name="ic_fixed_font">Czcionka o stałej szerokości</string>
-	<string name="ic_line_numbers">Pokaż numery linii</string>
-	<string name="ic_open">Otwórz</string>
-	<string name="no_content">Witaj!\n\nLess to bardzo lekka, szybka i prosta przeglądarka plików tekstowych.\n\nWybierz plik do otwarcia
+    <string name="failed_to_read">Błąd odczytu %s</string>
+    <string name="ic_fixed_font">Czcionka o stałej szerokości</string>
+    <string name="ic_line_numbers">Pokaż numery linii</string>
+    <string name="ic_open">Otwórz</string>
+    <string name="no_content">Witaj!\n\nLess to bardzo lekka, szybka i prosta przeglądarka plików tekstowych.\n\nWybierz plik do otwarcia
 		korzystając z górnego menu.\n\nWersja less: %s</string>
-	<string name="empty_file">Plik jest pusty</string>
-	<string name="hint_double_tap">Dotknij tekstu dwa razy aby przełączyć na pełny ekran!</string>
+    <string name="empty_file">Plik jest pusty</string>
+    <string name="hint_double_tap">Dotknij tekstu dwa razy aby przełączyć na pełny ekran!</string>
 </resources>

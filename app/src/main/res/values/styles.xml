@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<style name="AppEditTextStyle"
-		parent="android:Widget.EditText">
-		<item name="android:textColor">@color/textColor</item>
-	</style>
+    <style name="AppEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
 
-	<style name="AppTextViewStyle"
-		parent="android:Widget.TextView">
-		<item name="android:textColor">@color/textColor</item>
-	</style>
+    <style name="AppTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
 
-	<style name="AppTheme.ActionBarEllipsize.SubtitleTextStyle"
-		parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
-		<item name="android:textColor">@color/toolbar_subtitle</item>
-	</style>
+    <style name="AppTheme.ActionBarEllipsize.SubtitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/toolbar_subtitle</item>
+    </style>
 
-	<style name="PopUpMenuTheme">
-		<item name="colorAccent">@color/primary</item>
-		<item name="buttonTint">@color/primary_dark</item>
-	</style>
+    <style name="PopUpMenuTheme">
+        <item name="colorAccent">@color/primary</item>
+        <item name="buttonTint">@color/primary_dark</item>
+    </style>
 
-	<style name="AppTheme.ActionBarStyle"
-		parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
-		<item name="subtitleTextStyle">@style/AppTheme.ActionBarEllipsize.SubtitleTextStyle</item>
-		<item name="popupTheme">@style/PopUpMenuTheme</item>
-	</style>
+    <style name="AppTheme.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="subtitleTextStyle">@style/AppTheme.ActionBarEllipsize.SubtitleTextStyle</item>
+        <item name="popupTheme">@style/PopUpMenuTheme</item>
+    </style>
 
-	<style name="AppThemeBase"
-		parent="@style/Theme.AppCompat.DayNight">
-		<item name="actionModeBackground">@color/primary</item>
-		<item name="colorPrimary">@color/primary</item>
-		<item name="colorPrimaryDark">@color/primary</item>
-		<item name="editTextStyle">@style/AppEditTextStyle</item>
-		<item name="android:actionModeBackground">@color/primary</item>
-		<item name="android:colorPrimary">@color/primary</item>
-		<item name="android:colorPrimaryDark">@color/primary</item>
-		<item name="android:textColorPrimary">@android:color/white</item>
-		<item name="android:editTextStyle">@style/AppEditTextStyle</item>
-		<item name="android:textViewStyle">@style/AppTextViewStyle</item>
-		<item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
-	</style>
+    <style name="AppThemeBase" parent="@style/Theme.AppCompat.DayNight">
+        <item name="actionModeBackground">@color/primary</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="editTextStyle">@style/AppEditTextStyle</item>
+        <item name="android:actionModeBackground">@color/primary</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:editTextStyle">@style/AppEditTextStyle</item>
+        <item name="android:textViewStyle">@style/AppTextViewStyle</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBarStyle</item>
+    </style>
 
-	<style name="AppTheme" parent="AppThemeBase" />
+    <style name="AppTheme" parent="AppThemeBase" />
 </resources>

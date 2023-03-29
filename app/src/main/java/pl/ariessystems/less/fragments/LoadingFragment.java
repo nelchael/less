@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment;
 import pl.ariessystems.less.R;
 
 public class LoadingFragment extends Fragment {
-	@Override
-	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.fragment_loading, container, false);
-	}
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_loading, container, false);
+    }
 }
